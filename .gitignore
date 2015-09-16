@@ -1,0 +1,34 @@
+## General
+
+# build, distribute, and bins (+ python proto bindings)
+.build_debug/*
+.build_release/*
+Release
+Debug
+x64
+distribute/*
+*.testbin
+*.bin
+python/caffe/proto/
+cmake_build
+.cmake_build
+3rdparty
+bin
+*.sdf
+*.opensdf
+*.pdb
+*.rar
+*.lib
+*.dll
+*.exp
+*.deps
+*.pyd
+
+# LevelDB files
+*.sst
+*.ldb
+LOCK
+LOG
+LOG.old
+CURRENT
+MANIFEST-*
