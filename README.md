@@ -2,9 +2,9 @@
 A Visual Studio project to build leveldb python wrapper
 
 ## Usage
-1. Modify the python path in the settings.
+1. Change the compile mode to Release X64.
 
-2. Change the compile mode to Release X64.
+2. Modify the python path in the settings.
 
 3. Compile
 
