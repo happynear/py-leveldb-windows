@@ -7,7 +7,9 @@ Python2.7: [Google Drive](https://drive.google.com/open?id=0B0OhXbSTAU1HcFBJUTNy
 
 Python3.6: [Google Drive](https://drive.google.com/open?id=0B0OhXbSTAU1HLWFpS0NjcmZFZm8), [Baidu Yun](http://pan.baidu.com/s/1jI3LE8e)
 
-Put the `leveldb.pyd` in folder `YOUR_PYTHON_ROOT/Lib/site-packages`.
+Put the `leveldb.pyd` in folder `YOUR_PYTHON_ROOT/Lib/site-packages`. 
+
+Run `python ./test-py-leveldb.py`(python2) or `python ./test-py3-leveldb.py`(python3). If everything is ok, you will get `hello world` response and a folder named `db`.
 
 ## Usage
 1. Change the compile mode to Release X64.
