@@ -9,15 +9,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="leveldb">
-      <UniqueIdentifier>{af757a90-f702-4a23-8a32-f34bd9ac7d55}</UniqueIdentifier>
-    </Filter>
     <Filter Include="pyleveldb">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="snappy">
-      <UniqueIdentifier>{a04174fc-dbfc-4bb8-b546-025c880b0efa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -29,129 +23,6 @@
     </ClCompile>
     <ClCompile Include="..\leveldb_ext.cc">
       <Filter>pyleveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\snappy\snappy.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\snappy\snappy-sinksource.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\snappy\snappy-stubs-internal.cc">
-      <Filter>snappy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\arena.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\block.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\block_builder.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\bloom.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\builder.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\c.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\cache.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\coding.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\comparator.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\crc32c.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\db_impl.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\db_iter.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\dbformat.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\env.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\env_win.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\filename.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\filter_block.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\filter_policy.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\format.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\hash.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\iterator.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\log_reader.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\log_writer.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\logging.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\helpers\memenv\memenv.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\memtable.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\merger.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\options.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\port\port_win.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\repair.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\util\status.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\table.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\table_builder.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\table_cache.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\table\two_level_iterator.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\version_edit.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\version_set.cc">
-      <Filter>leveldb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\leveldb\db\write_batch.cc">
-      <Filter>leveldb</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

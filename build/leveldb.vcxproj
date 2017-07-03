@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8B5799B7-7AE7-4707-9FEB-6A17005A9BE2}</ProjectGuid>
+    <ProjectGuid>{E1E15176-5BAE-4B61-AA4C-3AD988F6CD60}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>leveldb_ext</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -31,7 +32,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -44,7 +45,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,6 +72,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>static_leveldbd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -78,8 +80,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetExt>.pyd</TargetExt>
-    <TargetName>leveldb</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <TargetName>static_leveldb</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -102,8 +104,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LEVELDB_EXT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Anaconda\include;D:\ThirdPartyLibrary\pyleveldb\leveldbwin\lib_leveldb_vc10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LEVELDB_EXT_EXPORTS;LEVELDB_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\leveldb;..\leveldb\include;..\snappy;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -140,7 +142,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LEVELDB_EXT_EXPORTS;LEVELDB_PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Anaconda3\include;..\leveldb;..\leveldb\include;..\snappy;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\leveldb;..\leveldb\include;..\snappy;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -156,19 +158,47 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\leveldb_ext.cc" />
-    <ClCompile Include="..\leveldb_object.cc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\leveldb_ext.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\win32_impl_src\leveldb.def" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="leveldb.vcxproj">
-      <Project>{e1e15176-5bae-4b61-aa4c-3ad988f6cd60}</Project>
-    </ProjectReference>
+    <ClCompile Include="..\snappy\snappy-sinksource.cc" />
+    <ClCompile Include="..\snappy\snappy-stubs-internal.cc" />
+    <ClCompile Include="..\snappy\snappy.cc" />
+    <ClCompile Include="..\leveldb\db\builder.cc" />
+    <ClCompile Include="..\leveldb\db\c.cc" />
+    <ClCompile Include="..\leveldb\db\dbformat.cc" />
+    <ClCompile Include="..\leveldb\db\db_impl.cc" />
+    <ClCompile Include="..\leveldb\db\db_iter.cc" />
+    <ClCompile Include="..\leveldb\db\filename.cc" />
+    <ClCompile Include="..\leveldb\db\log_reader.cc" />
+    <ClCompile Include="..\leveldb\db\log_writer.cc" />
+    <ClCompile Include="..\leveldb\db\memtable.cc" />
+    <ClCompile Include="..\leveldb\db\repair.cc" />
+    <ClCompile Include="..\leveldb\db\table_cache.cc" />
+    <ClCompile Include="..\leveldb\db\version_edit.cc" />
+    <ClCompile Include="..\leveldb\db\version_set.cc" />
+    <ClCompile Include="..\leveldb\db\write_batch.cc" />
+    <ClCompile Include="..\leveldb\helpers\memenv\memenv.cc" />
+    <ClCompile Include="..\leveldb\port\port_win.cc" />
+    <ClCompile Include="..\leveldb\table\block.cc" />
+    <ClCompile Include="..\leveldb\table\block_builder.cc" />
+    <ClCompile Include="..\leveldb\table\filter_block.cc" />
+    <ClCompile Include="..\leveldb\table\format.cc" />
+    <ClCompile Include="..\leveldb\table\iterator.cc" />
+    <ClCompile Include="..\leveldb\table\merger.cc" />
+    <ClCompile Include="..\leveldb\table\table.cc" />
+    <ClCompile Include="..\leveldb\table\table_builder.cc" />
+    <ClCompile Include="..\leveldb\table\two_level_iterator.cc" />
+    <ClCompile Include="..\leveldb\util\arena.cc" />
+    <ClCompile Include="..\leveldb\util\bloom.cc" />
+    <ClCompile Include="..\leveldb\util\cache.cc" />
+    <ClCompile Include="..\leveldb\util\coding.cc" />
+    <ClCompile Include="..\leveldb\util\comparator.cc" />
+    <ClCompile Include="..\leveldb\util\crc32c.cc" />
+    <ClCompile Include="..\leveldb\util\env.cc" />
+    <ClCompile Include="..\leveldb\util\env_win.cc" />
+    <ClCompile Include="..\leveldb\util\filter_policy.cc" />
+    <ClCompile Include="..\leveldb\util\hash.cc" />
+    <ClCompile Include="..\leveldb\util\logging.cc" />
+    <ClCompile Include="..\leveldb\util\options.cc" />
+    <ClCompile Include="..\leveldb\util\status.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

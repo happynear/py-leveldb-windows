@@ -2,7 +2,7 @@ LIBRARY "leveldb.pyd"
 
 EXPORTS 
 
-initleveldb
+PyInit_leveldb
 
 leveldb_open
 
@@ -117,3 +117,4 @@ leveldb_cache_destroy
 leveldb_create_default_env
 
 leveldb_env_destroy
+
