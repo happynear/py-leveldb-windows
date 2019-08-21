@@ -3,9 +3,9 @@ A Visual Studio project to build leveldb python wrapper
 
 ## Pre-built Binaries
 
-Python2.7: [Google Drive](https://drive.google.com/open?id=0B0OhXbSTAU1HcFBJUTNyczF6RjQ), [Baidu Yun](http://pan.baidu.com/s/1dE3FDHR)
+Python2.7 (64-bit): [Google Drive](https://drive.google.com/open?id=0B0OhXbSTAU1HcFBJUTNyczF6RjQ), [Baidu Yun](http://pan.baidu.com/s/1dE3FDHR)
 
-Python3.6: [Google Drive](https://drive.google.com/open?id=0B0OhXbSTAU1HLWFpS0NjcmZFZm8), [Baidu Yun](http://pan.baidu.com/s/1jI3LE8e)
+Python3.6 (64-bit): [Google Drive](https://drive.google.com/open?id=0B0OhXbSTAU1HLWFpS0NjcmZFZm8), [Baidu Yun](http://pan.baidu.com/s/1jI3LE8e)
 
 Put the `leveldb.pyd` in folder `YOUR_PYTHON_ROOT/Lib/site-packages`. 
 
